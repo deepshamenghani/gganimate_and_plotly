@@ -53,6 +53,15 @@ Data visualizations are a key tool in this process of sharing insights with stak
 - And sometimes, because it looks pretty  
 
 
+:::{.callout-tip}
+
+# Github repository for code
+
+You can find the code to reproduce this report at [deepshamenghani/gganimate_and_plotly](https://github.com/deepshamenghani/gganimate_and_plotly)
+::: 
+
+<br>
+
 # US population example
 
 ## Dataset
@@ -771,3 +780,10 @@ There are many scenarios where animation can be extended to help enable taking a
 
 - Try out animation, it is very easy
 - Don't animate everything, just because you can!
+
+:::{.callout-tip}
+
+# Github repository for code
+
+You can find the code to reproduce this report at [deepshamenghani/gganimate_and_plotly](https://github.com/deepshamenghani/gganimate_and_plotly)
+::: 
