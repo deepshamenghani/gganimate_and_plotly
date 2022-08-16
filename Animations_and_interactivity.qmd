@@ -781,6 +781,9 @@ There are many scenarios where animation can be extended to help enable taking a
 - Try out animation, it is very easy
 - Don't animate everything, just because you can!
 
+![Because Spiderman said so](spiderman_quote.jpg)
+
+
 :::{.callout-tip}
 
 # Github repository for code
