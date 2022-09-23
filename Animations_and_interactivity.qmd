@@ -41,6 +41,12 @@ library(crosstalk)
 
 ```
 
+::: callout-note
+# Quarto blog publish details
+
+This blog was created using [Quarto](https://quarto.org/) and published with Github actions. 
+:::
+
 # Data visualizations
 
 Data visualizations are a key tool in this process of sharing insights with stakeholders.
@@ -175,7 +181,6 @@ datatable(head(population_dataset_clean %>% filter(Name == "Alabama") %>% select
 Note that the US population dataset was downloaded from the census website and cleaned for purposes of this session. Link to the raw data can be found at [census.gov](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
 :::
 
-<br>
 
 # GGAnimate
 
@@ -228,7 +233,6 @@ The plot above shows relative population across states for 2020. To compare how 
 The *Code structure* only shows the basic minimum structure you need to follow to replicate the plot creation. The *Code extended* tab shows the actual code in use to create the plots and it may use reproducible functions shown above.
 :::
 
-<br>
 
 ### Animate
 
@@ -342,13 +346,14 @@ Another advantage of this package is that you can easily save and share a gif in
 anim_save(file = "usa_population_map_animated.gif")
 ```
 
+<br>  
+
+
 Great, now let's look at another plot example...
 
-<br>
 
 ## Population Density Rank vs population density
 
-<br>
 
 ### Dataset
 
