@@ -188,7 +188,6 @@ Note that the US population dataset was downloaded from the census website and c
 
 I wanted to showcase relative change in population among all states on the US map between the period 1910 to 2020. The plot below showcass relative population among states in the year 2020.
 
-::: panel-tabset
 ### Relative population 2020
 
 ```{r fig.width=12, fig.height=10}
@@ -200,32 +199,6 @@ ggplotly(usa_population_map_single_year, tooltip = "text")
 
 ```
 
-### Side by side
-
-::: grid
-::: g-col-6
-```{r fig.width=6, fig.height=5}
-
-## Plot for single year ----
-usa_population_map_single_year <- plot_usa_population_map(data = population_dataset_lat_long %>% filter(Year %in% (2020))) + theme(legend.position = "none")
-
-ggplotly(usa_population_map_single_year, tooltip = "text")
-
-```
-:::
-
-::: g-col-6
-```{r fig.width=6, fig.height=5}
-
-## Plot for single year ----
-usa_population_map_single_year <- plot_usa_population_map(data = population_dataset_lat_long %>% filter(Year %in% (1910))) + theme(legend.position = "none")
-
-ggplotly(usa_population_map_single_year, tooltip = "text")
-
-```
-:::
-:::
-:::
 
 The plot above shows relative population across states for 2020. To compare how the relative population has changed over time you would need to plot another map for 1910 and switch between the two. Instead, animating this map and creating a second gif allows us to see how the relative population has changed between the two time periods. Note that the animation below is just for two census data points, one in 1910 and one in 2020, not every census year in between.
 
