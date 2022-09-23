@@ -63,9 +63,9 @@ Data visualizations are a key tool in this process of sharing insights with stak
 You can find the code to reproduce this report at [deepshamenghani/gganimate_and_plotly](https://github.com/deepshamenghani/gganimate_and_plotly)
 :::
 
-<br>
-
 # US population example
+
+Note that the US population dataset was downloaded from the census website and cleaned for purposes of this blog. Link to the raw data can be found at [census.gov](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html).
 
 ## Dataset
 
@@ -175,18 +175,13 @@ plot_usa_population_map <- function(data) {
 datatable(head(population_dataset_clean %>% filter(Name == "Alabama") %>% select(Name, Year, Population= Resident_Population, Density = Resident_Population_Density, Rank = Rank_Population_Density)))
 ```
 
-::: {.callout-note collapse="true"}
-## US population data source
-
-Note that the US population dataset was downloaded from the census website and cleaned for purposes of this session. Link to the raw data can be found at [census.gov](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
-:::
 
 
 # GGAnimate
 
 ## Geospatial population analysis
 
-I wanted to showcase relative change in population among all states on the US map between the period 1910 to 2020. The plot below showcass relative population among states in the year 2020.
+I wanted to showcase relative change in population among all states on the US map between the period 1910 to 2020. 
 
 ### Relative population 2020
 
@@ -470,11 +465,11 @@ animate(density_rank_plot_multistate_animated, duration =20, fps = 10, width = 9
 ```
 :::
 
-## Not always rainbows and butterflies with GGAnimate package
+## Pros and Cons of GGAnimate package
 
 ### Pros
 
--   Easily animate almost any plot
+-   Easily animate almost any ggplot object
 
 -   Make it part of your report or save as a gif
 
@@ -488,9 +483,9 @@ animate(density_rank_plot_multistate_animated, duration =20, fps = 10, width = 9
 
 # Plotly Animation package
 
-Now let's try the same example and recreate that animation with plotly.
+Plot package helps alleviate some of the concerns we saw with GGAnimate while allowing to add the component of interactivity. Now let's try the same example and recreate the animation with the plotly package. Press the _PLAY_ button to start the animation, or use the _Scroll bar_ to navigate the plot over time.   
 
-## Animation
+## Animation using plotly
 
 ::: panel-tabset
 ### Plotly Output
@@ -580,13 +575,15 @@ data_med %>%
 ```
 :::
 
-Here are insights from the plot above that now become easier to showcase:
+Here are insights from the plot above that now become much easier to showcase:
 
 -   Washington and California both started with similar low density and ranking in 1910, but California grew much faster and higher than Washington over time.
 -   California rose in both density and ranking over time until 1960, after which it started to rise in density without much change in ranking, both of which came close to Pennsylvania by 2020.
 -   Alabama, while continuing to rise in density, lowered in ranking over time and was topped by California in 1950 and by Washington in 2000.
 
-## Interactivity
+## Interactivity with Crosstalk package   
+
+Crosstalk package allows adding further interactivity to our plotly object. For instance, in the plot above, we want to enable the user to highlight a state, and we can do that with crosstalk + plotly. As previously, use the play button or scroll bar to navigate over time. Use the dropdown called _Select a state_ to further highlight one or more states.    
 
 ::: panel-tabset
 ### Plotly Output
@@ -685,7 +682,7 @@ state_data %>%
 ```
 :::
 
-## Relative to GGAnimate, Plotly requires a few more steps.
+## Pros and cons of plotly package
 
 ### Pros
 
@@ -697,10 +694,11 @@ state_data %>%
 
 -   Can't save as a gif and send it over
 -   Requires frame creation
+-   Relative to GGAnimate, Plotly requires a few more steps
 
 # Bringing these animations to other projects
 
-There are many scenarios where animation can be extended to help enable taking a step back and telling a broader story, such as:
+Both packages are great and depending upon your scenario and medium of communication, you can choose one or the other. There are many scenarios where animation can be extended to help enable taking a step back and telling a broader story, such as:
 
 -   Plotting customer count versus revenue for multiple products and animating over time to compare across product lines.
 -   Mapping the relative change in support ticket resolution times across customer service centers.
