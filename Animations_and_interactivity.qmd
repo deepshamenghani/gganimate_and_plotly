@@ -44,7 +44,7 @@ library(crosstalk)
 ::: callout-note
 # Quarto blog publish details
 
-This blog was created using [Quarto](https://quarto.org/) and published with Github actions. 
+This blog was created using [Quarto](https://quarto.org/) and published with Github Pages. 
 :::
 
 # Data visualizations
